@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Circles</title>
+	<link rel="stylesheet" type="text/css" href="/Users/gbrod/PatatapClone/assets/css/circles.css">
 	<script type="text/javascript" src="/Users/gbrod/PatatapClone/assets/lib/paperjs-v0.10.2/dist/paper-full.js"></script>
-
 	<script type="text/paperscript" canvas="myCanvas">
+
 
 	// Create a Paper.js Path to draw a line into it:
 	var path = new Path();
@@ -19,6 +20,13 @@
 	// Note the plus operator on Point objects.
 	// PaperScript does that for us, and much more!
 	path.lineTo(start + [ 500, -50 ]);
+
+	//create a circle object with color black 
+	var myCircle = new Path.Circle(new Point(100, 70), 50);
+	myCircle.fillColor = 'purple';
+
+	var myCircle2 = new Path.Circle(new Point(1000, 30), 400);
+	myCircle2.fillColor = 'blue';
 
 	</script>
 
