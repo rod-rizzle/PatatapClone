@@ -4,30 +4,16 @@
 	<title>Circles</title>
 	<link rel="stylesheet" type="text/css" href="/Users/gbrod/PatatapClone/assets/css/circles.css">
 	<script type="text/javascript" src="/Users/gbrod/PatatapClone/assets/lib/paperjs-v0.10.2/dist/paper-full.js"></script>
+
 	<script type="text/paperscript" canvas="myCanvas">
 
+	for (var y = 0; y < 1800; y+=100) {
 
-	// Create a Paper.js Path to draw a line into it:
-	var path = new Path();
-
-	// Give the stroke a color
-	path.strokeColor = 'red';
-	var start = new Point(0, 100);
-
-	// Move to start and draw a line from there
-	path.moveTo(start);
-
-	// Note the plus operator on Point objects.
-	// PaperScript does that for us, and much more!
-	path.lineTo(start + [ 500, -50 ]);
-
-	//create a circle object with color black 
-	var myCircle = new Path.Circle(new Point(100, 70), 50);
-	myCircle.fillColor = 'purple';
-
-	var myCircle2 = new Path.Circle(new Point(1000, 30), 400);
-	myCircle2.fillColor = 'blue';
-
+		for (var x = 0; x<1800; x+=100) {
+		var myCircle2 = new Path.Circle(new Point(x, y), 10);
+		myCircle2.fillColor = 'purple';
+		} 
+	}
 	</script>
 
 </head>
