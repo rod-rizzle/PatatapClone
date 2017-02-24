@@ -7,29 +7,24 @@
 
 	<script type="text/paperscript" canvas="myCanvas">
 
-	var colors = [
-					"yellow",
-					"green",
-					"blue", 
-					"red", 
-					"purple", 
-					"gray"
-	];
+	var circles = []; 
 
 	function onKeyDown(event) {   //onKeyDown creates a new circle object on keyDown event
-		var randColor = colors[Math.floor((Math.random() * 6) + 1)];   //random color selected from colors array
+		
 		var maxPoint = new Point(view.size.width,view.size.height);   //maxpoint object created to determine size of UI
 		var randPoint = Point.random();   //selects a random point on the UI
 		var point = maxPoint * randPoint;    //creates the x and y coordinates that will be passed to the point object
-		new Path.Circle(point, 10).fillColor = randColor;
+		var circle = new Path.Circle(point, 500); 
+		circle.fillColor = "red";
+		circles.push(circle);
 	}
 
-	var animatedCircle = new Path.Circle(new Point(300,300), 100);   //creating a new object for test purposes
-	animatedCircle.fillColor = colors[3];   //assigning color to the object on object init
-
 	function onFrame(event) {
-		animatedCircle.fillColor.hue += 1;   //fillColor method changes the hue of the object every frame
-		animatedCircle.scale(.9);   //scale method reduces the size of the object by the parameter every frame
+
+		for (var i = 0; i<circles.length; i++) {
+			circles[i].fillColor.hue += 1;   //fillColor method changes the hue of the object every frame
+			circles[i].scale(.9);   //scale method reduces the size of the object by the parameter every frame
+		}
 	}
 
 	</script>
