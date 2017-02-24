@@ -10,12 +10,12 @@
 
 	var circles = []; 
 	
-	var sound1 = new Howl({
+	var sounds = new Howl({
   		urls: "/Users/gbrod/PatatapClone/assets/lib/Neuronal-Synchrony-master/assets/A/bubbles.mp3"
 	});
 
 	function onKeyDown(event) {   //onKeyDown creates a new circle object on keyDown event
-		sound1.play();
+		<!-- sounds.play(); -->
 		var maxPoint = new Point(view.size.width,view.size.height);   //maxpoint object created to determine size of UI
 		var randPoint = Point.random();   //selects a random point on the UI
 		var point = maxPoint * randPoint;    //creates the x and y coordinates that will be passed to the point object
