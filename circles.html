@@ -4,18 +4,14 @@
 	<title>Circles</title>
 	<link rel="stylesheet" type="text/css" href="/Users/gbrod/PatatapClone/assets/css/circles.css">
 	<script type="text/javascript" src="/Users/gbrod/PatatapClone/assets/lib/paperjs-v0.10.2/dist/paper-full.js"></script>
-	<script type="text/javascript" src="/Users/gbrod/PatatapClone/assets/js/howler.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
 	
 	<script type="text/paperscript" canvas="myCanvas">
-
-	var circles = []; 
 	
-	var sounds = new Howl({
-  		urls: "/Users/gbrod/PatatapClone/assets/lib/Neuronal-Synchrony-master/assets/A/bubbles.mp3"
-	});
+	var circles = []; 
 
 	function onKeyDown(event) {   //onKeyDown creates a new circle object on keyDown event
-		<!-- sounds.play(); -->
+
 		var maxPoint = new Point(view.size.width,view.size.height);   //maxpoint object created to determine size of UI
 		var randPoint = Point.random();   //selects a random point on the UI
 		var point = maxPoint * randPoint;    //creates the x and y coordinates that will be passed to the point object
